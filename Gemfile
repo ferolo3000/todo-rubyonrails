@@ -7,7 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'sqlite3', '~> 1.3', '< 1.4'
+#gem 'sqlite3', '~> 1.3', '< 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -49,6 +49,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.11'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -67,3 +68,8 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem 'chromedriver-helper'
 end
+
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.2'
+end
+
